@@ -1,5 +1,5 @@
 # PFDA-Project-DrugConsumption
-- *LEDUC Bastien - LE CHEVALIER Jean - LE FOCH Pierrick*
+*LEDUC Bastien - LE CHEVALIER Jean - LE FOCH Pierrick*
 
 # Python for data analysis - Drug Consumption Data set
 
