@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <html lang="en">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Python PJB</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <body data-new-gr-c-s-check-loaded="14.1040.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1040.0" style="background-color: rgb(243, 237, 206);">
+    <div class="container" style=""></div><div class="container" style=""></div>
+  
+      <div class="container">
+        <div class="header clearfix">        
+          <h3 class="text-muted">Prediction Result</h3>
+        </div>
+       
+          <form action="{% url 'result' %}"><hr style=""><p class="lead" style="height: 64px;" contenteditable="true" spellcheckker="false">According to your input data, the individual {{ans}}</p></form>           
+              
+             <form action="{% url 'home' %}"> 
+              <button type="submit" name="" class="btn btn-primary" style="background-color: rgb(200, 206, 213);" value="submit">Back</button>
+              </form>
+      </div>
+
+
+    </div> 
+  
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>

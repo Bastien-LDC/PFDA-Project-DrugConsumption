@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Python PJB</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+    <body data-new-gr-c-s-check-loaded="14.1040.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1040.0" style="background-color: rgb(243, 237, 206);"><div class="container" style=""></div><div class="container" style=""></div>
+  
+  <div class="jumbotron" style="text-decoration-color: rgb(129, 130, 131); background-color: rgb(240, 240, 240);">
+      <div class="container" style=""></div>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert" style="top: -15px;">		  
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">			
+      <span aria-hidden="true">×</span>		 
+       </button>		  
+       <strong>Disclaimer !</strong>&nbsp;The prediction results do not reflect the reality and should not be taken literally.</div>
+      
+      <div class="container">
+        <div class="header clearfix">         
+          <h3 class="text-muted">Prediction Menu</h3>
+        </div>
+    
+      
+          
+          <form action="{% url 'result' %}">
+          
+          {% csrf_token %}
+          
+              <p class="lead" style="height: 64px;">Find out if someone is likely to have consumed any illegal drug in the last 30 days according to some of her/his personal measurements !&nbsp;</p>
+              <select class="form-control" name="X1" style="width: 250px; margin-right: 0px; padding-right: 0px;" contenteditable="true" spellcheckker="false">
+                  <option hidden> Age </option>
+                  <option value=-0.95197>18-24</option>
+                  <option value=-0.07854>25-34</option>
+                  <option value=0.49788>35-44</option>
+                  <option value=1.09449>45-54</option>
+                  <option value=1.82213>55-64</option>
+                  <option value=2.59171>65+</option>
+              </select>
+              
+              <select class="form-control" name="X2" style="width: 250px; margin-right: 0px; padding-right: 0px;" contenteditable="true" spellcheckker="false">
+              <option hidden> Education </option>
+              <option value=-2.43591>Left school before 16 years</option>
+              <option value=-1.7379>Left school at 16 years</option>
+              <option value=-1.43719>Left school at 17 years</option>
+              <option value=-1.22751>Left school at 18 years</option>
+              <option value=-0.61113>Some college but no degree</option>
+              <option value=-0.05921>Professional certificate/diploma</option>
+              <option value=0.45468>University degree</option>
+              <option value=1.16365>Masters degree</option>
+              <option value=1.98437>Doctorate degree</option>                    
+              </select>
+              
+              <div class="form-group" style="width: 250px; margin-right: 0px; padding-right: 0px;" contenteditable="true" spellcheckker="false">
+                    <input type="number" step="0.1" min="-3" max="3" name="X3" class="form-control" placeholder=" Neuroticism " required="">
+                    <input type="number" step="0.1" min="-3" max="3" name="X4" class="form-control" placeholder=" Extraversion " required="">
+                    <input type="number" step="0.1" min="-3" max="3" name="X5" class="form-control" placeholder=" Openess to Experience" required="">
+                    <input type="number" step="0.1" min="-3" max="3" name="X6" class="form-control" placeholder=" Agreeableness" required="">
+                    <input type="number" step="0.1" min="-3" max="3" name="X7" class="form-control" placeholder="  Conscientiousness" required="">
+                    <input type="number" step="0.1" min="-2" max="3" name="X8" class="form-control" placeholder=" Impulsiveness" required="">
+                    <input type="number" step="0.1" min="-3" max="3" name="X9" class="form-control" placeholder=" Sensation Seeking" required="">              
+              </div>
+             <div class="btn-group" role="group" aria-label="Basic example" style="">
+              <button type="submit" name="" class="btn btn-primary" style="background-color: rgb(0, 209, 146);" value="submit">Predict</button>    
+              <div class="row marketing">          
+          </form>
+              <form action="{% url 'firstpage' %}"> 
+                  <button type="submit" name="" class="btn btn-primary" style="background-color: rgb(200, 206, 213);" value="submit">, Back</button>
+              </form></div>
+      </div>
+
+
+    </div> 
+  
+</html>

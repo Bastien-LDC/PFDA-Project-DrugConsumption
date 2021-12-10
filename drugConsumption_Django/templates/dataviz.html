@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    
+
+    <title>Python PJB</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+    <body data-new-gr-c-s-check-loaded="14.1040.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1040.0" style="background-color: rgb(243, 237, 206);"><div class="container" style=""></div><div class="container" style=""></div>
+  
+      <div class="container">
+        <div class="header clearfix">         
+          <h3 class="text-muted">Data Visualization Menu</h3>
+        </div>
+        
+    <div class="jumbotron" style="background-color: rgb(243, 237, 206);">
+    <div class="btn-group" role="group" aria-label="Basic example" style="">
+    <form action= "{% url 'corrMatF' %}">
+    <button type="submit" class="btn btn-primary" style="background-color: rgb(200, 220, 250); color: rgb(0, 0, 0);" value="submit">1</button>
+    </form>
+    <form action= "{% url 'corrMatO' %}">
+    <button type="submit" class="btn btn-primary" style="background-color: rgb(200, 225, 250); color: rgb(0, 0, 0);" value="submit">2</button>
+    </form>
+    <form action= "{% url 'map1' %}">
+    <button type="submit" class="btn btn-primary" style="background-color: rgb(200, 225, 250); color: rgb(0, 0, 0);" value="submit">3</button>
+    </form>
+    <form action= "{% url 'pie' %}">
+    <button type="submit" class="btn btn-primary" style="background-color: rgb(200, 225, 250); color: rgb(0, 0, 0);" value="submit">4</button>
+    </form>
+    </div>
+    <ul class="list-group" style="">
+      <br>
+      <li class="list-group-item">
+        <span class="badge" style="">1</span>
+        Correlation matrix between dataset features (personal measurements)</li>
+      <li class="list-group-item">
+        <span class="badge">2</span>&nbsp;Correlation matrix between dataset target values (legal &amp; illegal drugs)</li>
+      <li class="list-group-item">
+        <span class="badge">3</span>
+        Map of represented countries in the dataset</li><li class="list-group-item"><span style="font-size: 12px; white-space: nowrap;">
+        <b>&nbsp;&nbsp;4</b></span>&nbsp;&nbsp;Pie chart of semeron (fictive drug) users age</li>
+    </ul>       
+      </div>
+             <form action="{% url 'firstpage' %}"> 
+                  <button type="submit" name="" class="btn btn-primary" style="background-color: rgb(200, 206, 213);" value="submit">Back</button>
+              </form></div>
+      </div>
+
+
+    </div> 
+  
+</html>

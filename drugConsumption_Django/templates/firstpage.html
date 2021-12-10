@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <html lang="en">
+
+    <title>Python PJB</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+
+  <body data-new-gr-c-s-check-loaded="14.1041.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1041.0" style="background-color: rgb(240, 240, 240);">
+
+  
+
+      <div class="jumbotron" style="text-decoration-color: rgb(129, 130, 131); background-color: rgb(240, 240, 240);">
+      <div class="container" style=""></div>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert" style="top: -15px;">		  
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">			
+      <span aria-hidden="true">×</span>		 
+       </button>		  
+       <strong>Disclaimer !</strong>&nbsp;Some of the drugs mentioned in the API are dangerous and damaging. Please be careful.</div>
+        
+        <h1 class="display-3">Drug consumption dataset<div style="width: 400px; height: 53px;"></div></h1>
+        <p class="lead">The dataset is from UCI's website ML repository. It contains a list of individuals and their characteristics (identity and behavioral) as well as the last time they used some drugs (legal and illegal).</p>
+        <p style="text-align: center;"><img src="https://cdn-icons-png.flaticon.com/512/477/477890.png" height="128" width="128" style="text-align: center;"><p class="lead" style="text-align: center;">Bastien Leduc - Pierrick Le Floch - Jean Le Chevalier</p></p>
+      
+      
+      <div class="btn-group" role="group" aria-label="Basic example" style="">
+      <form action= "{% url 'dataviz' %}">
+      <button type="submit" class="btn btn-secondary" value="submit" style="text-align: center;">Dataviz</button>
+      </form>
+      <form action="https://archive.ics.uci.edu/ml/datasets/Drug+consumption+%28quantified%29">
+      <button type="submit" class="btn btn-secondary" value="submit" style="text-align: center;">Dataset</button> 
+      </form>
+      <form action="{% url 'home' %}">
+      <button type="submit" class="btn btn-secondary" value="submit" style="text-align: center;">Predict</button></form></div></div>
+      
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>
