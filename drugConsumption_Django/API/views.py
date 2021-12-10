@@ -244,6 +244,8 @@ def strip_consumption(label_list):
                 res[i]=res[i][:-12]
     return res
 
+
+
 def heatmap(df,category):
     X=df.loc[:,category].astype(float)
     x_list = strip_consumption(category)
@@ -351,19 +353,22 @@ def corrOutputs(request):
     return render(request, 'corrMatO.html')
 
 def map1(request):
-    list_countries = ["GBR","AUS","CAN","NZL","IRL","USA"]
+    list_countries = ["AUS","CAN","NZL","IRL","GBR","USA"]
     count_cases_cty = pd.DataFrame.from_dict(count_cases("Country",clean_data))
     count_cases_cty = count_cases_cty[count_cases_cty["keys"]!='Other']
     count_cases_cty["iso_alpha"] = list_countries
-
+    
     fig = px.choropleth(count_cases_cty, locations="iso_alpha",
-                    color="vals", # lifeExp is a column of gapminder
-                    hover_name="keys", # column to add to hover information
-                    color_continuous_scale=px.colors.sequential.Plasma,
-                    projection="natural earth")
+                        color="vals", # lifeExp is a column of gapminder
+                        hover_name="keys", # column to add to hover information
+                        color_continuous_scale=px.colors.sequential.Plasma,
+                        projection="natural earth")
     fig.update_geos(fitbounds="locations", visible=True)
     fig.write_html("templates/map1.html")
     return render(request, 'map1.html')
+
+
+
 
 def pie(request):
     fig=pieChart("Age",semeron_users)
